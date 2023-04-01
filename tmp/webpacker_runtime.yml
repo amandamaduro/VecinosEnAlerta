@@ -1,0 +1,130 @@
+---
+default:
+  source_path: app/packs
+  source_entry_path: entrypoints
+  public_output_path: decidim-packs
+  public_root_path: public
+  webpack_compile_output: true
+  cache_path: tmp/webpacker-cache
+  extract_css: true
+  additional_paths: &1
+  - node_modules
+  - app/packs
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-api-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-comments-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-accountability-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-admin-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-assemblies-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-blogs-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-budgets-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-debates-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-forms-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-meetings-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-pages-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-participatory_processes-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-proposals-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-sortitions-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-templates-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-surveys-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-system-0.27.2/app/packs"
+  - "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-dev-0.27.2/app/packs"
+  cache_manifest: false
+  entrypoints: &2
+    decidim_api_docs: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-api-0.27.2/app/packs/entrypoints/decidim_api_docs.js"
+    decidim_api_graphiql: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-api-0.27.2/app/packs/entrypoints/decidim_api_graphiql.js"
+    decidim_core: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_core.js"
+    decidim_sw: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_sw.js"
+    decidim_conference_diploma: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_conference_diploma.js"
+    decidim_email: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_email.js"
+    decidim_map: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_map.js"
+    decidim_geocoding_provider_photon: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_geocoding_provider_photon.js"
+    decidim_geocoding_provider_here: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_geocoding_provider_here.js"
+    decidim_map_provider_default: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_map_provider_default.js"
+    decidim_map_provider_here: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_map_provider_here.js"
+    decidim_widget: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-core-0.27.2/app/packs/entrypoints/decidim_widget.js"
+    decidim_accountability: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-accountability-0.27.2/app/packs/entrypoints/decidim_accountability.js"
+    decidim_accountability_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-accountability-0.27.2/app/packs/entrypoints/decidim_accountability_admin.js"
+    decidim_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-admin-0.27.2/app/packs/entrypoints/decidim_admin.js"
+    decidim_assemblies: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-assemblies-0.27.2/app/packs/entrypoints/decidim_assemblies.js"
+    decidim_assemblies_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-assemblies-0.27.2/app/packs/entrypoints/decidim_assemblies_admin.js"
+    decidim_blogs: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-blogs-0.27.2/app/packs/entrypoints/decidim_blogs.js"
+    decidim_budgets: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-budgets-0.27.2/app/packs/entrypoints/decidim_budgets.js"
+    decidim_budgets_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-budgets-0.27.2/app/packs/entrypoints/decidim_budgets_admin.js"
+    decidim_debates_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-debates-0.27.2/app/packs/entrypoints/decidim_debates_admin.js"
+    decidim_forms: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-forms-0.27.2/app/packs/entrypoints/decidim_forms.js"
+    decidim_forms_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-forms-0.27.2/app/packs/entrypoints/decidim_forms_admin.js"
+    decidim_questionnaire_answers_pdf: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-forms-0.27.2/app/packs/entrypoints/decidim_questionnaire_answers_pdf.js"
+    decidim_meetings: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-meetings-0.27.2/app/packs/entrypoints/decidim_meetings.js"
+    decidim_meetings_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-meetings-0.27.2/app/packs/entrypoints/decidim_meetings_admin.js"
+    decidim_pages: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-pages-0.27.2/app/packs/entrypoints/decidim_pages.js"
+    decidim_participatory_processes: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-participatory_processes-0.27.2/app/packs/entrypoints/decidim_participatory_processes.js"
+    decidim_participatory_processes_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-participatory_processes-0.27.2/app/packs/entrypoints/decidim_participatory_processes_admin.js"
+    decidim_proposals: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-proposals-0.27.2/app/packs/entrypoints/decidim_proposals.js"
+    decidim_proposals_admin: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-proposals-0.27.2/app/packs/entrypoints/decidim_proposals_admin.js"
+    decidim_sortitions: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-sortitions-0.27.2/app/packs/entrypoints/decidim_sortitions.js"
+    decidim_templates: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-templates-0.27.2/app/packs/entrypoints/decidim_templates.js"
+    decidim_system: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-system-0.27.2/app/packs/entrypoints/decidim_system.js"
+    decidim_dev: "/home/amandamaduro/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/decidim-dev-0.27.2/app/packs/entrypoints/decidim_dev.js"
+  stylesheet_imports: &3
+    imports:
+      app:
+      - stylesheets/decidim/accountability/accountability
+      - stylesheets/decidim/budgets/budgets
+      - stylesheets/decidim/meetings/meetings
+      - stylesheets/decidim/proposals/proposals
+      - stylesheets/decidim/surveys/surveys
+development:
+  source_path: app/packs
+  source_entry_path: entrypoints
+  public_output_path: decidim-packs
+  public_root_path: public
+  webpack_compile_output: true
+  cache_path: tmp/webpacker-cache
+  extract_css: true
+  additional_paths: *1
+  cache_manifest: false
+  compile: true
+  dev_server:
+    https: false
+    host: localhost
+    port: 3035
+    hmr: false
+    client:
+      overlay: false
+    compress: true
+    allowed_hosts: all
+    pretty: true
+    headers:
+      Access-Control-Allow-Origin: "*"
+    static:
+      watch:
+        ignored: "**/node_modules/**"
+  entrypoints: *2
+  stylesheet_imports: *3
+test:
+  source_path: app/packs
+  source_entry_path: entrypoints
+  public_output_path: packs-test
+  public_root_path: public
+  webpack_compile_output: true
+  cache_path: tmp/webpacker-cache
+  extract_css: true
+  additional_paths: *1
+  cache_manifest: false
+  compile: true
+  entrypoints: *2
+  stylesheet_imports: *3
+production:
+  source_path: app/packs
+  source_entry_path: entrypoints
+  public_output_path: decidim-packs
+  public_root_path: public
+  webpack_compile_output: true
+  cache_path: tmp/webpacker-cache
+  extract_css: true
+  additional_paths: *1
+  cache_manifest: true
+  compile: false
+  entrypoints: *2
+  stylesheet_imports: *3
